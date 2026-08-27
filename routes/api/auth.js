@@ -4,6 +4,8 @@ const { check } = require('express-validator');
 const validateToken = require('../../middleware/auth');
 const { getCurrentUser, login, setApiKey, verify } = require('../../controllers/auth');
 
+//router.get//
+
 router.get('/', validateToken, getCurrentUser);
 
 router.post(
